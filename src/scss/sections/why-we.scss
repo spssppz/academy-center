@@ -1,0 +1,136 @@
+.why-we {
+	padding: rem(35) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(25) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(20) rem(0);
+	}
+	&__container {
+	}
+	&__body {
+		background: #eef1f4;
+		border-radius: rem(16);
+		padding: rem(32);
+		display: flex;
+		align-items: center;
+		gap: percent(55, 1556);
+		@media (max-width: $pc) {
+			gap: rem(40);
+		}
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			align-items: stretch;
+			padding: rem(24);
+			gap: rem(32);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(20);
+			gap: rem(24);
+		}
+	}
+	&__left {
+		flex: auto;
+	}
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(40);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(30);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(25);
+			}
+		}
+	}
+	&__cols {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: rem(30);
+		@media (max-width: $mobile) {
+			justify-content: center;
+			gap: rem(20);
+		}
+	}
+}
+
+.why-we-col {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&__icon {
+		width: rem(80);
+		img {
+			width: 100%;
+			height: auto;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(16);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(12);
+			}
+		}
+	}
+	&__descr {
+		font-size: rem(16);
+		line-height: math.div(19, 16);
+		padding: rem(7) rem(15);
+		border: rem(1) solid #e6eaf0;
+		border-radius: rem(5);
+		background-color: #fff;
+	}
+}
+
+.why-we-form {
+	flex: 0 0 percent(660, 1556);
+	@media (max-width: $tablet) {
+		flex: auto;
+	}
+	&__inputs {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: rem(24) rem(18);
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+			gap: rem(16);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(20);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__input {
+	}
+	&__btn {
+		width: 100%;
+	}
+}
+.input-line {
+	display: flex;
+	flex-direction: column;
+	gap: rem(12);
+	@media (max-width: $mobile) {
+		gap: rem(8);
+	}
+
+	.why-we & {
+		&:last-child {
+			@media (min-width: $mobile) {
+				grid-column: span 2;
+			}
+		}
+	}
+	&__descr {
+		font-size: rem(16);
+		line-height: math.div(19, 16);
+	}
+}

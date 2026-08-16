@@ -1,0 +1,218 @@
+.professions {
+	padding: rem(35) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(25) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(20) rem(0);
+	}
+	&__container {
+	}
+	&__head {
+		&:not(:last-child) {
+			margin-bottom: rem(40);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(30);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(25);
+			}
+		}
+	}
+	&__filter {
+		display: flex;
+		align-items: flex-start;
+		gap: rem(24);
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			align-items: stretch;
+			gap: rem(16);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(30);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(24);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__cols {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: rem(24);
+		@media (max-width: $pc) {
+			gap: rem(20);
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr 1fr;
+			gap: rem(16);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(20);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__pagging {
+	}
+}
+
+.professions-search {
+	position: relative;
+	@media (min-width: $tablet) {
+		flex: 1 0 rem(340);
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		left: rem(24);
+		width: rem(24);
+		height: rem(24);
+		pointer-events: none;
+		background: url("@img/icons/search.svg") 50% / 100% no-repeat;
+	}
+	&__input {
+		width: 100%;
+		background: #fff;
+		border: rem(1) solid #e6eaf0;
+		border-radius: rem(5);
+		height: rem(70);
+		padding: rem(0) rem(24) rem(0) rem(58);
+		font-size: rem(16);
+		color: #5c6670;
+		@media (max-width: $tablet) {
+			height: rem(60);
+		}
+		@media (max-width: $mobile) {
+			height: rem(52);
+			padding: rem(0) rem(16) rem(0) rem(48);
+		}
+	}
+}
+
+.professions-alphabet {
+	min-width: 0;
+	&__label {
+		font-size: rem(16);
+		line-height: math.div(19, 16);
+		color: #5c6670;
+		&:not(:last-child) {
+			margin-bottom: rem(12);
+		}
+	}
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(14);
+		@media (max-width: $tablet) {
+			gap: rem(8);
+		}
+	}
+	&__item {
+	}
+	&__link {
+		font-size: rem(16);
+		line-height: math.div(19, 16);
+		border: rem(1) solid #d8d8d8;
+		border-radius: rem(5);
+		padding: rem(9);
+		transition: 0.3s;
+		display: block;
+		@media (max-width: $mobile) {
+			font-size: rem(14);
+			padding: rem(7);
+		}
+		&_active {
+			background: #e51616;
+			color: #fff;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: #e51616;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.profession {
+	border-radius: rem(16);
+	overflow: hidden;
+	box-shadow: 0 rem(2) rem(12) 0 rgba(137, 137, 137, 0.25);
+	aspect-ratio: 387/209;
+	position: relative;
+	padding: rem(24);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+	@media (max-width: $tablet) {
+		padding: rem(20);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(16);
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to bottom, rgba(#000, 0), black);
+	}
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__body {
+		position: relative;
+		z-index: 2;
+		width: 100%;
+	}
+	&__title {
+		font-weight: 500;
+		font-size: rem(20);
+		line-height: math.div(22, 20);
+		color: #fff;
+		&:not(:last-child) {
+			margin-bottom: rem(10);
+		}
+	}
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(20);
+	}
+	&__btn {
+		padding: rem(9) rem(17);
+		font-size: rem(10);
+	}
+	&__link {
+	}
+	&__count {
+		font-size: rem(10);
+		line-height: 1.1;
+		padding: rem(8) rem(12);
+		border-radius: rem(5);
+		box-shadow: 0 rem(2) rem(12) 0 rgba(137, 137, 137, 0.25);
+		background: #f0f2f5;
+	}
+}

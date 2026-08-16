@@ -1,0 +1,58 @@
+.menu-aside {
+	border: rem(1) solid #ccc;
+	border-radius: rem(5);
+	overflow: hidden;
+	flex: 0 0 rem(387);
+	position: sticky;
+	top: rem(16);
+	max-height: calc(100vh - rem(32));
+	overflow: auto;
+	scrollbar-width: none;
+	@media (max-width: $tablet) {
+		flex: auto;
+		width: 100%;
+		position: static;
+		max-height: none;
+		overflow: visible;
+	}
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	&__nav {
+	}
+	&__list {
+	}
+	&__item {
+		&:not(:last-child) {
+			border-bottom: rem(1) solid #ccc;
+		}
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		font-size: rem(16);
+		line-height: math.div(19, 16);
+		padding: rem(15) rem(16) rem(15) rem(16);
+		justify-content: space-between;
+		min-height: rem(54);
+		transition: 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				background: #eef1f4;
+				padding: rem(15) rem(16) rem(15) rem(22);
+			}
+		}
+		&_active {
+			background: #eef1f4;
+			font-weight: 600;
+			padding: rem(15) rem(16) rem(15) rem(22);
+			&::after {
+				content: "";
+				flex: 0 0 rem(12);
+				width: rem(12);
+				aspect-ratio: 12/24;
+				background: url("@img/icons/menu-arrow.svg") 50% / 100% no-repeat;
+			}
+		}
+	}
+}

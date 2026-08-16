@@ -1,0 +1,84 @@
+.you-get {
+	padding: rem(35) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(25) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(20) rem(0);
+	}
+	&__container {
+	}
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(40);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(25);
+			}
+		}
+	}
+	&__cols {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: rem(43) rem(28);
+		@media (max-width: $pc) {
+			gap: rem(30) rem(20);
+		}
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr 1fr;
+			gap: rem(24) rem(16);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+			gap: rem(16);
+		}
+	}
+}
+
+.you-get-col {
+	padding: rem(24);
+	background: #eef1f4;
+	border-radius: rem(16);
+	@media (max-width: $mobile) {
+		padding: rem(20);
+	}
+
+	&__icon {
+		width: rem(64);
+		img {
+			width: 100%;
+			height: auto;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(22);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(20);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(15);
+			}
+		}
+	}
+	&__label {
+		font-weight: 700;
+		font-size: rem(24);
+		@media (max-width: $tablet) {
+			font-size: rem(22);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(20);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(25);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(20);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(15);
+			}
+		}
+	}
+	&__descr {
+		color: #838383;
+		line-height: math.div(88, 72);
+	}
+}

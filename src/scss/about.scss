@@ -1,0 +1,264 @@
+.about {
+	&__subtitle {
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__slider {
+		@media (max-width: $tablet) {
+			overflow: visible;
+		}
+	}
+}
+
+.about-intro {
+	display: flex;
+	gap: rem(24);
+	@media (max-width: $pc) {
+		flex-direction: column;
+	}
+	@media (max-width: $tablet) {
+		gap: rem(20);
+	}
+	&:not(:last-child) {
+		margin-bottom: rem(42);
+		@media (max-width: $tablet) {
+			margin-bottom: rem(28);
+		}
+		@media (max-width: $mobile) {
+			margin-bottom: rem(20);
+		}
+	}
+	&__left {
+		flex: 0 0 percent(661, 1210);
+		@media (max-width: $tablet) {
+			flex: auto;
+			width: 100%;
+		}
+	}
+	&__image {
+		border-radius: rem(5);
+		img {
+			width: 100%;
+			height: auto;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(32);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+	&__btn {
+		width: 100%;
+	}
+	&__content {
+		line-height: 1.2;
+		color: #000;
+		p {
+			&:not(:last-child) {
+				margin-bottom: 1em;
+			}
+		}
+	}
+}
+
+.about-cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: rem(33) rem(25);
+	@media (max-width: $pc) {
+		gap: rem(20);
+	}
+	@media (max-width: em(1199.98)) {
+		grid-template-columns: 1fr;
+	}
+	@media (max-width: $tablet) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media (max-width: $mobile) {
+		grid-template-columns: 1fr;
+		gap: rem(16);
+	}
+	&:not(:last-child) {
+		margin-bottom: rem(42);
+		@media (max-width: $tablet) {
+			margin-bottom: rem(28);
+		}
+		@media (max-width: $mobile) {
+			margin-bottom: rem(20);
+		}
+	}
+	&_red {
+	}
+}
+
+.about-card {
+	display: flex;
+	align-items: center;
+	gap: rem(24);
+	padding: rem(24);
+	border: rem(1) solid #eef1f4;
+	border-radius: rem(5);
+	min-height: rem(139);
+	@media (max-width: $tablet) {
+		padding: rem(20);
+		gap: rem(16);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(16);
+		min-height: 0;
+	}
+	&__icon {
+		flex: 0 0 rem(58);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		aspect-ratio: 1;
+		border-radius: rem(5);
+		background: #eef1f4;
+		@media (max-width: $mobile) {
+			flex-basis: rem(48);
+		}
+		.about-card_red & {
+			background: #e51616;
+		}
+	}
+	&__right {
+	}
+	&__title {
+		font-weight: 600;
+		font-size: rem(20);
+		line-height: math.div(24, 20);
+		@media (max-width: $mobile) {
+			font-size: rem(18);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(10);
+		}
+	}
+	&__descr {
+		font-size: rem(16);
+		line-height: math.div(19, 16);
+	}
+}
+
+.about-stats {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	gap: rem(42);
+	@media (max-width: $pc) {
+		gap: rem(24);
+	}
+	@media (max-width: em(1199.98)) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media (max-width: $tablet) {
+		grid-template-columns: 1fr 1fr;
+		gap: rem(20);
+	}
+	@media (max-width: $mobile) {
+		grid-template-columns: 1fr;
+		gap: rem(16);
+	}
+	&:not(:last-child) {
+		margin-bottom: rem(42);
+		@media (max-width: $tablet) {
+			margin-bottom: rem(28);
+		}
+		@media (max-width: $mobile) {
+			margin-bottom: rem(20);
+		}
+	}
+}
+
+.about-stat {
+	background: #eef1f4;
+	border-radius: rem(5);
+	padding: rem(24);
+	@media (min-width: em(1199.98)) {
+		grid-column: span 2;
+	}
+	@media (max-width: $tablet) {
+		padding: rem(20);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(16);
+	}
+	&_wide {
+		@media (min-width: em(1199.98)) {
+			grid-column: span 3;
+		}
+	}
+	&__value {
+		font-weight: 700;
+		font-size: rem(32);
+		color: #e51616;
+		line-height: math.div(39, 32);
+		@media (max-width: em(1199.98)) {
+			font-size: rem(28);
+		}
+		@media (max-width: $tablet) {
+			font-size: rem(26);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(24);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(18);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(12);
+			}
+		}
+	}
+	&__descr {
+		line-height: math.div(19, 16);
+	}
+}
+
+.about-gallery {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: rem(24);
+	@media (max-width: $pc) {
+		gap: rem(16);
+	}
+	@media (max-width: em(1099.98)) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media (max-width: $tablet) {
+		display: flex;
+		gap: 0;
+	}
+	&__item {
+		border-radius: rem(7);
+		overflow: hidden;
+		aspect-ratio: 387/384;
+		position: relative;
+		@media (max-width: $tablet) {
+			flex: 0 0 calc((100% - rem(20 * (2 - 1))) / 2);
+		}
+		@media (max-width: $mobile) {
+			flex: 0 0 rem(300);
+		}
+		@media (max-width: $mobileSmall) {
+			flex: 0 0 rem(250);
+		}
+		&:not(:last-child) {
+			@media (max-width: $tablet) {
+				margin-right: rem(20);
+			}
+		}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}

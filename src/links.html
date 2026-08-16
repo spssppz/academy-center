@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"АНО ДПО «Академия ЦЕНТР»"
+})
+
+<body>
+
+	<div class="wrapper">
+		@@include('html/header.html')
+		<main>
+
+			<div class="links">
+				<div class="links__container">
+					<ul class="links__cols">
+						<li class="links__col">
+							<h2>Страницы:</h2>
+							<ol>
+								<li><a href="index.html">Главная</a></li>
+								<li><a href="services.html">Услуги</a></li>
+								<li><a href="service.html">Страница услуги</a></li>
+								<li><a href="about.html">О компании</a></li>
+								<li><a href="workers.html">Сотрудники</a></li>
+								<li><a href="contacts.html">Контакты</a></li>
+								<li><a href="information.html">Правовая информация</a></li>
+								<li><a href="vacancies.html">Вакансии</a></li>
+								<li><a href="licenses.html">Лицензии</a></li>
+								<li><a href="sample-forms.html">Образцы бланков</a></li>
+								<li><a href="check-docs.html">Онлайн-проверка документов</a></li>
+								<li><a href="alphabet.html">Алфавитный указатель</a></li>
+							</ol>
+						</li>
+						<li class="links__col">
+							<h2>Попапы:</h2>
+							<ol>
+								<li><button type="button" data-popup="#application">Оставить заявку</button></li>
+							</ol>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</main>
+		@@include('html/footer.html')
+	</div>
+
+	@@include('html/popup.html')
+
+
+	@@include('html/js.html')
+
+</body>
+
+</html>

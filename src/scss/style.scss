@@ -1,0 +1,158 @@
+@use "sass:math";
+
+// Подключение миксинов
+@import "base/mixins";
+
+// Подключение шрифтов
+@import "fonts/fonts";
+
+// Шрифт по умолчанию
+$fontFamily: "Inter";
+$fontSize: rem(18); // размер шрифта по умолчанию
+
+// Основные цвета
+$mainColor: #111418; // Цвет шрифта по умолчанию
+
+// Минимальная ширина страницы
+$minWidth: 360;
+// Ширина полотна (макета)
+// $maxWidth: 1920;
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1620;
+// Общий отступ у контейнера
+$containerPadding: 30;
+
+// Брейк-поинты
+$pc: em($maxWidthContainer - 0.02); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(767.98); // Телефоны L
+$mobileSmall: em(479.98); // Телефоны S
+
+// Обнуление и общие параметры
+@import "base/null";
+
+body {
+	// Скролл заблокирован
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+	}
+	// Сайт загружен
+	.loaded & {
+	}
+}
+
+// Оболочка
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	// Прижимаем footer
+	main {
+		flex: 1 1 auto;
+	}
+	// Фикс для слайдеров
+	> * {
+		min-width: 0;
+	}
+}
+// Ограничивающий контейнер
+[class*="__container"] {
+	max-width: rem($maxWidthContainer);
+	box-sizing: content-box;
+	margin: 0 auto;
+	padding: 0 rem(math.div($containerPadding, 2));
+}
+
+// Подключение базовых стилей, шаблонов (заготовок) и вспомогательных  классов
+// Для подключения/отключения конкретных стилей смотри base.scss
+@import "base";
+
+// Подключение стилей общих элементов проекта
+@import "common";
+@import "global";
+
+// Подключение стилей отдельных блоков
+@import "header";
+@import "footer";
+
+// Подключение стилей отдельных страниц
+@import "home"; // Главная
+//
+@import "about";
+@import "workers";
+@import "contacts";
+@import "information";
+@import "vacancies";
+@import "licenses";
+@import "sample-forms";
+@import "check-docs";
+@import "alphabet";
+
+.links {
+	background: url("@img/screenshot.png") 50% / cover no-repeat;
+	color: #f8f6f7;
+	padding: rem(40) rem(0);
+	min-height: 100vh;
+	position: relative;
+	@media (max-width: $tablet) {
+		padding: rem(32) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(20) rem(0);
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(#2b2b2b, 0.85);
+	}
+	&__container {
+		position: relative;
+		z-index: 3;
+	}
+	&__cols {
+	}
+	&__col {
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(20);
+			}
+		}
+		h2 {
+			font-size: rem(24);
+			font-weight: 400;
+			@media (max-width: $tablet) {
+				font-size: rem(20);
+			}
+			&:not(:last-child) {
+				margin-bottom: rem(16);
+			}
+		}
+		ol {
+			counter-reset: num;
+			li {
+				counter-increment: num;
+				&::before {
+					content: counter(num) ". ";
+				}
+				a {
+					font-size: rem(18);
+					transition: color 0.3s;
+					@media (any-hover: hover) {
+						&:hover {
+							color: #cb1f25;
+						}
+					}
+				}
+				&:not(:last-child) {
+					margin-bottom: rem(6);
+				}
+			}
+		}
+	}
+}

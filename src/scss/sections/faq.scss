@@ -1,0 +1,181 @@
+.faq {
+	padding: rem(35) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(25) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(20) rem(0);
+	}
+	&__container {
+	}
+	&__head {
+		&:not(:last-child) {
+			margin-bottom: rem(50);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(40);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(25);
+			}
+		}
+	}
+	&__body {
+		display: flex;
+		gap: rem(24);
+		@media (max-width: $tablet) {
+			gap: rem(20);
+			flex-direction: column;
+		}
+		@media (max-width: $mobile) {
+			gap: rem(16);
+		}
+	}
+	&__list {
+		flex: auto;
+	}
+}
+
+.faq-item {
+	border-bottom: rem(1) solid rgba(0, 0, 0, 0.2);
+	position: relative;
+	&__btn {
+		font-weight: 600;
+		font-size: rem(24);
+		line-height: math.div(29, 24);
+		color: #000;
+		padding: rem(27) rem(70) rem(27) 0;
+		width: 100%;
+		text-align: left;
+		position: relative;
+		@media (max-width: $tablet) {
+			font-size: rem(22);
+			padding: rem(20) rem(70) rem(20) rem(0);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(20);
+			padding: rem(16) rem(70) rem(16) rem(0);
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: rem(18);
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%) rotate(180deg);
+			right: rem(21);
+			width: rem(38);
+			aspect-ratio: 38/21;
+			transition: transform 0.3s;
+			background: url("@img/icons/faq-arrow.svg") 50% / 100% no-repeat;
+			@media (max-width: $tablet) {
+				width: rem(30);
+			}
+		}
+		&._spoller-active {
+			&::after {
+				transform: translate(0, -50%) rotate(0deg);
+			}
+		}
+	}
+	&__answer {
+		font-size: rem(16);
+		line-height: math.div(19, 16);
+		color: #5c6670;
+		padding-bottom: rem(24);
+		@media (min-width: $pc) {
+			padding-right: rem(130);
+		}
+		@media (max-width: $tablet) {
+			padding-bottom: rem(20);
+		}
+		@media (max-width: $mobile) {
+			padding-bottom: rem(16);
+		}
+	}
+}
+.faq-app {
+	flex: 0 0 percent(524, 1620);
+	background: #eef1f4;
+	border-radius: rem(7);
+	padding: rem(40) rem(28);
+	@media (max-width: $pc) {
+		flex: 0 0 rem(420);
+	}
+	@media (max-width: $tablet) {
+		padding: rem(32) rem(20);
+		flex: auto;
+	}
+	@media (max-width: $mobile) {
+		padding: rem(24) rem(16);
+	}
+	&__label {
+		font-weight: 700;
+		font-size: rem(36);
+		line-height: math.div(44, 36);
+		@media (max-width: $tablet) {
+			font-size: rem(32);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(28);
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: rem(24);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(12);
+			}
+		}
+	}
+	&__descr {
+		color: #5c6670;
+		font-size: rem(16);
+		line-height: math.div(19, 16);
+		&:not(:last-child) {
+			margin-bottom: rem(30);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+}
+
+.app-form {
+	display: flex;
+	flex-direction: column;
+	&__input-wrapper {
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: rem(24);
+			width: rem(24);
+			height: rem(24);
+			background: url("@img/icons/form-phone.svg") 50% / 100% no-repeat;
+			transform: translate(0, -50%);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(20);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__input {
+		padding: rem(0) rem(72);
+	}
+	&__btn {
+		&:not(:last-child) {
+			margin-bottom: rem(34);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(25);
+			}
+		}
+	}
+}

@@ -1,0 +1,130 @@
+.reviews {
+	padding: rem(35) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(25) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(20) rem(0);
+	}
+	&__container {
+	}
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(32);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(25);
+			}
+		}
+	}
+	&__cols {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: rem(27);
+		@media (max-width: $pc) {
+			gap: rem(20);
+		}
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr 1fr;
+			gap: rem(16);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+.review-col {
+	background: #eef1f4;
+	border-radius: rem(16);
+	padding: rem(32) rem(16);
+	@media (max-width: $tablet) {
+		padding: rem(24) rem(16);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(20) rem(12);
+	}
+	&__head {
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+		&:not(:last-child) {
+			margin-bottom: rem(32);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(24);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__icon {
+	}
+	&__descr {
+		font-weight: 600;
+		font-size: rem(24);
+		line-height: math.div(29, 24);
+		@media (max-width: $tablet) {
+			font-size: rem(22);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(20);
+		}
+	}
+	&__list {
+	}
+}
+
+.review {
+	background: #fff;
+	border-radius: rem(5);
+	border: rem(1) dashed #7b7b7b;
+	padding: rem(12);
+	&:not(:last-child) {
+		margin-bottom: rem(32);
+		@media (max-width: $tablet) {
+			margin-bottom: rem(24);
+		}
+		@media (max-width: $mobile) {
+			margin-bottom: rem(16);
+		}
+	}
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: rem(30);
+		&:not(:last-child) {
+			margin-bottom: rem(12);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(8);
+			}
+		}
+	}
+	&__name {
+		font-weight: 600;
+		font-size: rem(18);
+		color: #000;
+		line-height: math.div(22, 18);
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+		}
+	}
+	&__date {
+		font-size: rem(10);
+		line-height: math.div(12, 10);
+		color: #898989;
+	}
+	&__rating {
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(12);
+			}
+		}
+	}
+	&__text {
+		font-size: rem(14);
+		line-height: math.div(51, 42);
+		color: #7b7b7b;
+	}
+}

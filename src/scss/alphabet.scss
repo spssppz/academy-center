@@ -1,0 +1,236 @@
+.alphabet {
+	padding: rem(12) rem(0) rem(80);
+	@media (max-width: $tablet) {
+		padding: rem(12) rem(0) rem(60);
+		overflow: hidden;
+	}
+	@media (max-width: $mobile) {
+		padding: rem(12) rem(0) rem(50);
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__descr {
+		line-height: math.div(22, 18);
+		color: #838383;
+		&:not(:last-child) {
+			margin-bottom: rem(32);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(24);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__body {
+		padding: rem(23);
+		border: rem(1) solid #7b7b7b;
+		border-radius: rem(16);
+		align-self: stretch;
+		@media (max-width: $tablet) {
+			padding: rem(20);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(16);
+		}
+	}
+	&__letter {
+		font-weight: 700;
+		font-size: rem(36);
+		color: #e51616;
+		line-height: math.div(44, 36);
+		@media (max-width: $tablet) {
+			font-size: rem(30);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(26);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(12);
+			}
+		}
+	}
+	&__subtitle {
+		font-size: rem(24);
+		line-height: math.div(29, 24);
+		border-bottom: rem(1) solid #d8d8d8;
+		padding-bottom: rem(15);
+		@media (max-width: $tablet) {
+			font-size: rem(20);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(32);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(24);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__pagging {
+	}
+}
+
+.alphabet-menu {
+	&:not(:last-child) {
+		margin-bottom: rem(24);
+	}
+	&__title {
+		font-weight: 700;
+		font-size: rem(36);
+		line-height: math.div(44, 36);
+		@media (max-width: $tablet) {
+			font-size: rem(28);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(24);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(32);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(24);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__tabs {
+		display: flex;
+		gap: rem(12) rem(16);
+		flex-wrap: wrap;
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__tab {
+		font-size: rem(20);
+		line-height: math.div(24, 20);
+		padding: rem(11) rem(15);
+		border: rem(1) solid #d9d9d9;
+		border-radius: rem(5);
+		transition: background 0.3s;
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+			padding: rem(9) rem(12);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: #eef1f4;
+			}
+		}
+		&_active {
+			background: #eef1f4;
+		}
+	}
+}
+
+.alphabet-form {
+	display: flex;
+	gap: rem(24);
+	@media (max-width: $mobile) {
+		flex-direction: column;
+		gap: rem(12);
+	}
+	&:not(:last-child) {
+		margin-bottom: rem(16);
+	}
+	&__input-wrapper {
+		flex: auto;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+			left: rem(24);
+			width: rem(24);
+			height: rem(24);
+			pointer-events: none;
+			background: url("@img/icons/search.svg") 50% / 100% no-repeat;
+		}
+	}
+	&__input {
+		width: 100%;
+		background: #fff;
+		border: rem(1) solid #e6eaf0;
+		border-radius: rem(5);
+		height: rem(70);
+		padding: rem(0) rem(24) rem(0) rem(58);
+		font-size: rem(16);
+		color: #5c6670;
+		@media (max-width: $tablet) {
+			height: rem(60);
+		}
+		@media (max-width: $mobile) {
+			height: rem(52);
+			padding: rem(0) rem(16) rem(0) rem(48);
+		}
+	}
+	&__btn {
+		font-weight: 700;
+		font-size: rem(18);
+		padding: rem(16);
+		min-height: rem(60);
+		flex: 0 0 rem(389);
+		@media (max-width: $tablet) {
+			flex: 0 0 rem(220);
+		}
+		@media (max-width: $mobile) {
+			flex: auto;
+			width: 100%;
+			min-height: rem(52);
+		}
+	}
+}
+
+.alphabet-services {
+	columns: 3;
+	gap: rem(100);
+	@media (max-width: $pc) {
+		gap: rem(50);
+	}
+	@media (max-width: $tablet) {
+		columns: 2;
+		gap: rem(32);
+	}
+	@media (max-width: $mobile) {
+		columns: 1;
+	}
+	&:not(:last-child) {
+		margin-bottom: rem(32);
+		@media (max-width: $mobile) {
+			margin-bottom: rem(20);
+		}
+	}
+	&__item {
+		font-size: rem(20);
+		line-height: math.div(24, 20);
+		@media (max-width: $mobile) {
+			font-size: rem(18);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+}

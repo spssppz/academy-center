@@ -1,0 +1,29 @@
+<div class="popup" id="application" aria-hidden="true">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<div class="application">
+				<h2 class="application__title title">Оставить заявку</h2>
+				<div class="application__descr">Заполните форму — мы свяжемся с вами.</div>
+				<form class="popup-form" action="#">
+					<label class="popup-form__line input-line">
+						<span class="input-line__descr">ФИО</span>
+						<input class="input-line__input input" type="text" name="form[]" placeholder="Ваше имя">
+					</label>
+					<label class="popup-form__line input-line">
+						<span class="input-line__descr">Телефон</span>
+						<input class="input-line__input input phone" type="text" name="form[]" placeholder="+7 (___) ___-__-__">
+					</label>
+					<label class="popup-form__line input-line">
+						<span class="input-line__descr">Комментарий</span>
+						<textarea class="input-line__input input" name="form[]" placeholder="Кратко опишите суть…"></textarea>
+					</label>
+					<button class="popup-form__btn btn">Отправить заявку</button>
+					<label class="checkbox">
+						<input class="checkbox__input" type="checkbox" value="1" name="form[]">
+						<span class="checkbox__text">Я согласен на <a href="">обработку персональных данных</a></span>
+					</label>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

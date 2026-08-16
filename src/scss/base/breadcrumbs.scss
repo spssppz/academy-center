@@ -1,0 +1,46 @@
+// Базовые стили хлебных крошек
+// Сниппет (HTML): breadcrumbs
+
+.breadcrumbs {
+	&:not(:last-child) {
+		margin-bottom: rem(24);
+		@media (max-width: $tablet) {
+			margin-bottom: rem(20);
+		}
+		@media (max-width: $mobile) {
+			margin-bottom: rem(16);
+		}
+	}
+	ul {
+		display: flex;
+		align-items: center;
+		gap: rem(8);
+		flex-wrap: wrap;
+		li {
+			font-weight: 300;
+			font-size: rem(10);
+			line-height: math.div(12, 10);
+			&:last-child {
+				color: #7b7b7b;
+			}
+			&:not(:last-child) {
+				display: inline-flex;
+				align-items: center;
+				gap: rem(8);
+				&::after {
+					content: "/";
+				}
+			}
+			a {
+				text-decoration: underline;
+				text-decoration-skip-ink: none;
+				transition: color 0.3s;
+				@media (any-hover: hover) {
+					&:hover {
+						color: #7b7b7b;
+					}
+				}
+			}
+		}
+	}
+}

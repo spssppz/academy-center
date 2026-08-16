@@ -1,0 +1,118 @@
+.license-page {
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: rem(24);
+		@media (max-width: $pc) {
+			gap: rem(20);
+		}
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr 1fr;
+			gap: rem(16);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(40);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(30);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+	&__item {
+		border: rem(1) solid #d9d9d9;
+		border-radius: rem(8);
+	}
+	&__items {
+	}
+}
+
+.license-info-list {
+	&:not(:last-child) {
+		margin-bottom: rem(40);
+		@media (max-width: $tablet) {
+			margin-bottom: rem(30);
+		}
+		@media (max-width: $mobile) {
+			margin-bottom: rem(20);
+		}
+	}
+}
+
+.license-info {
+	background: #eef1f4;
+	border-radius: rem(8);
+	padding: rem(32);
+	color: #000;
+	display: flex;
+	flex-direction: column;
+	@media (max-width: $tablet) {
+		padding: rem(24);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(20) rem(16);
+	}
+	&:not(:last-child) {
+		margin-bottom: rem(40);
+		@media (max-width: $tablet) {
+			margin-bottom: rem(24);
+		}
+		@media (max-width: $mobile) {
+			margin-bottom: rem(16);
+		}
+	}
+	&__title {
+		line-height: math.div(29, 24);
+		font-weight: 700;
+		font-size: rem(24);
+		@media (max-width: $mobile) {
+			font-size: rem(20);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(12);
+			}
+		}
+	}
+	&__descr {
+		line-height: math.div(22, 18);
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(12);
+			}
+		}
+	}
+	&__number {
+		font-weight: 600;
+		font-size: rem(20);
+		line-height: math.div(24, 20);
+		@media (max-width: $mobile) {
+			font-size: rem(18);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(12);
+			}
+		}
+	}
+	&__btn {
+		align-self: flex-end;
+		min-width: rem(349);
+		min-height: rem(60);
+		font-weight: 700;
+		color: #e51616;
+		font-size: rem(18);
+		padding: rem(14) rem(20);
+		@media (max-width: $mobile) {
+			min-width: 0;
+			width: 100%;
+		}
+	}
+}

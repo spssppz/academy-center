@@ -1,0 +1,94 @@
+.licenses {
+	padding: rem(70) rem(0);
+	background: #eef1f4;
+	margin: rem(35) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(50) rem(0);
+		margin: rem(25) rem(0);
+		overflow: hidden;
+	}
+	@media (max-width: $mobile) {
+		padding: rem(40) rem(0);
+		margin: rem(20) rem(0);
+	}
+	@media (max-width: $mobileSmall) {
+		padding: rem(30) rem(0);
+	}
+	&__container {
+	}
+	&__head {
+		&:not(:last-child) {
+			margin-bottom: rem(18);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(25);
+			}
+		}
+	}
+	&__slider {
+		@media (max-width: $tablet) {
+			overflow: visible;
+		}
+	}
+	&__wrapper {
+		gap: rem(24);
+		@media (min-width: $tablet) {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+		@media (max-width: $pc) {
+			gap: rem(20) rem(16);
+		}
+		@media (max-width: $tablet) {
+			gap: 0;
+		}
+	}
+}
+
+.license {
+	background: #fff;
+	border-radius: rem(7);
+	padding: rem(26) rem(24);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	@media (max-width: $pc) {
+		padding: rem(20) rem(16);
+	}
+	@media (max-width: $tablet) {
+		flex: 0 0 calc((100% - rem(20 * (2 - 1))) / 2);
+	}
+	@media (max-width: $mobile) {
+		flex: 0 0 rem(260);
+	}
+	&:not(:last-child) {
+		@media (max-width: $tablet) {
+			margin-right: rem(20);
+		}
+	}
+	&__image {
+		img {
+			width: 100%;
+			height: auto;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+		}
+	}
+	&__label {
+		font-weight: 600;
+		font-size: rem(14);
+		line-height: math.div(17, 14);
+		&:not(:last-child) {
+			margin-bottom: rem(8);
+		}
+	}
+	&__descr {
+		font-size: rem(12);
+		line-height: math.div(15, 12);
+		color: #7b7b7b;
+		&::before {
+			content: "\2022\00A0";
+		}
+	}
+}

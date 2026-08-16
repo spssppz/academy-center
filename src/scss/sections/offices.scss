@@ -1,0 +1,123 @@
+.contacts + .offices {
+	padding: rem(80) 0 rem(150);
+	@media (max-width: $tablet) {
+		padding: rem(60) 0 rem(120);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(40) 0 rem(80);
+	}
+}
+
+.offices {
+	padding: rem(35) rem(0) rem(70);
+	@media (max-width: $tablet) {
+		padding: rem(25) rem(0) rem(50);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(20) rem(0) rem(40);
+	}
+	&__container {
+	}
+	&__head {
+		&:not(:last-child) {
+			margin-bottom: rem(32);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(25);
+			}
+		}
+	}
+	&__body {
+		display: flex;
+		gap: rem(24);
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			gap: rem(20);
+		}
+		@media (max-width: $mobile) {
+			gap: rem(16);
+		}
+	}
+	&__cols {
+		flex: auto;
+		border: rem(1) solid #e6eaf0;
+		padding: rem(50);
+		@media (max-width: $pc) {
+			padding: rem(40) rem(32);
+		}
+		@media (max-width: $tablet) {
+			padding: rem(32) rem(24);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(24) rem(16);
+		}
+	}
+	&__map {
+		background: #eef1f4;
+		@media (min-width: $tablet) {
+			flex: 0 0 percent(935, 1620);
+		}
+		@media (max-width: $tablet) {
+			height: rem(300);
+		}
+	}
+}
+
+.office {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	line-height: math.div(22, 18);
+	&:not(:last-child) {
+		margin-bottom: rem(24);
+		@media (max-width: $tablet) {
+			margin-bottom: rem(20);
+		}
+		@media (max-width: $mobile) {
+			margin-bottom: rem(16);
+		}
+	}
+	&__city {
+		font-weight: 700;
+		font-size: rem(22);
+		@media (max-width: $tablet) {
+			font-size: rem(20);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(12);
+			}
+		}
+	}
+	&__address {
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(12);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(8);
+			}
+		}
+	}
+	&__line {
+		display: inline-flex;
+		align-items: center;
+		gap: rem(12);
+		@media (max-width: $mobile) {
+			gap: rem(8);
+			font-size: rem(16);
+		}
+		span {
+			&:first-child {
+				font-weight: 500;
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(12);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(8);
+			}
+		}
+	}
+}

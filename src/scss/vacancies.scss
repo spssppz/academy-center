@@ -1,0 +1,207 @@
+.vacancies {
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: rem(40);
+		@media (max-width: $pc) {
+			gap: rem(24);
+		}
+		@media (max-width: em(1199.98)) {
+			grid-template-columns: 1fr;
+		}
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+			gap: rem(16);
+		}
+	}
+}
+
+.vacancy {
+	border: rem(1) solid #d8d8d8;
+	border-radius: rem(8);
+	padding: rem(13);
+	@media (max-width: $pc) {
+		padding: rem(13) rem(9);
+	}
+	&__title {
+		font-weight: 600;
+		font-size: rem(20);
+		line-height: math.div(24, 20);
+		@media (max-width: $tablet) {
+			font-size: rem(18);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(12);
+			}
+		}
+	}
+	&__descr {
+		font-size: rem(16);
+		line-height: math.div(38, 32);
+		&:not(:last-child) {
+			margin-bottom: rem(26);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(20);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__params {
+		display: flex;
+		gap: rem(10) rem(17);
+		flex-wrap: wrap;
+		&:not(:last-child) {
+			margin-bottom: rem(26);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(20);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__param {
+		font-size: rem(12);
+		line-height: math.div(15, 12);
+		padding: rem(8) rem(16);
+		background: #eef1f4;
+		border-radius: rem(5);
+		span {
+			font-weight: 600;
+		}
+	}
+	&__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(30);
+		@media (max-width: $pc) {
+			gap: rem(20);
+		}
+		@media (max-width: $mobile) {
+			gap: rem(12);
+		}
+	}
+	&__btn {
+		flex: auto;
+		padding: rem(12) rem(20);
+		min-height: rem(51);
+	}
+}
+
+//========================================================================================================================================================
+
+.quiz {
+	padding: rem(35) rem(0) rem(70);
+	@media (max-width: $tablet) {
+		padding: rem(25) rem(0) rem(50);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(20) rem(0) rem(40);
+	}
+	&__container {
+	}
+	&__body {
+		background: #eef1f4;
+		padding: rem(32) rem(45);
+		border-radius: rem(16);
+		display: flex;
+		gap: rem(30);
+		@media (max-width: $pc) {
+			padding: rem(28) rem(32);
+			gap: rem(20);
+		}
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			padding: rem(24);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(20) rem(16);
+		}
+	}
+	&__left {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		flex: auto;
+	}
+	&__label {
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(12);
+			}
+		}
+	}
+	&__descr {
+		line-height: math.div(22, 18);
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__tags {
+		display: flex;
+		gap: rem(8) rem(16);
+		flex-wrap: wrap;
+	}
+	&__tag {
+		font-size: rem(16);
+		line-height: math.div(19, 16);
+		color: #000;
+		padding: rem(7) rem(11);
+		border: rem(1) solid #e6eaf0;
+		border-radius: rem(5);
+		background-color: #fff;
+	}
+}
+
+.quiz-form {
+	flex: 0 0 percent(549, 1530);
+	display: flex;
+	flex-direction: column;
+	@media (max-width: $tablet) {
+		flex: auto;
+		width: 100%;
+	}
+	&__sel {
+		&:not(:last-child) {
+			margin-bottom: rem(28);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+	&__input {
+		&:not(:last-child) {
+			margin-bottom: rem(28);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+	&__btn {
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+}

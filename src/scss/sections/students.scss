@@ -1,0 +1,82 @@
+.students {
+	padding: rem(35) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(25) rem(0);
+		overflow: hidden;
+	}
+	@media (max-width: $mobile) {
+		padding: rem(20) rem(0);
+	}
+	&__container {
+	}
+	&__head {
+		&:not(:last-child) {
+			margin-bottom: rem(44);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(35);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(25);
+			}
+		}
+	}
+	&__slider {
+		@media (max-width: $tablet) {
+			overflow: visible;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(40);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(30);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+	&__wrapper {
+		gap: rem(24);
+		@media (min-width: $tablet) {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+		@media (max-width: $pc) {
+			gap: rem(20) rem(16);
+		}
+		@media (max-width: $tablet) {
+			gap: 0;
+		}
+	}
+	&__slide {
+		border-radius: rem(7);
+		overflow: hidden;
+		aspect-ratio: 387/384;
+		@media (max-width: $tablet) {
+			flex: 0 0 calc((100% - rem(20 * (2 - 1))) / 2);
+		}
+		@media (max-width: $mobile) {
+			flex: 0 0 rem(300);
+		}
+		&:not(:last-child) {
+			@media (max-width: $tablet) {
+				margin-right: rem(20);
+			}
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__btn-wrapper {
+		text-align: center;
+	}
+	&__btn {
+		@media (min-width: $mobile) {
+			min-width: rem(524);
+		}
+		@media (max-width: $mobile) {
+			width: 100%;
+		}
+	}
+}

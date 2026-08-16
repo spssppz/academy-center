@@ -1,0 +1,50 @@
+.checkbox {
+	cursor: pointer;
+	position: relative;
+	user-select: none;
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		// &:focus + .checkbox__text::before {
+		// 	box-shadow: 0 rem(4) rem(8) rgba(0, 0, 0, 0.2);
+		// }
+		&:checked + .checkbox__text::after {
+			opacity: 1;
+		}
+	}
+	&__text {
+		line-height: math.div(15, 12);
+		font-size: rem(12);
+		display: inline-block;
+		position: relative;
+		padding-left: rem(26);
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: rem(19);
+			height: rem(16);
+		}
+		&::before {
+			border: rem(2) solid #d24a43;
+			border-radius: rem(2);
+		}
+		&::after {
+			background: url("@img/icons/check.svg") 50% no-repeat;
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+		a {
+			text-decoration-skip-ink: none;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

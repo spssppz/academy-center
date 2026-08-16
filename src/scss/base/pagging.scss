@@ -1,0 +1,61 @@
+.pagging {
+	background: #f6f6f6;
+	border-radius: rem(5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: rem(22) rem(8);
+	@media (max-width: $tablet) {
+		padding: rem(16) rem(8);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(12) rem(8);
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: rem(12) rem(16);
+		@media (max-width: $tablet) {
+			gap: rem(8) rem(12);
+		}
+	}
+	&__item {
+		flex: 0 0 rem(37);
+	}
+	&__link {
+		font-size: rem(20);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: rem(35);
+		@media (max-width: $tablet) {
+			font-size: rem(18);
+		}
+		&_active {
+			font-weight: 700;
+			font-size: rem(24);
+			position: relative;
+			@media (max-width: $tablet) {
+				font-size: rem(22);
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: rem(3);
+				background: #e51616;
+			}
+		}
+	}
+	&__dots {
+		font-size: rem(20);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: rem(35);
+	}
+}

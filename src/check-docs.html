@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Онлайн-проверка документов"
+})
+
+<body>
+
+	<div class="wrapper">
+		@@include('html/header.html')
+		<main>
+			<div class="page">
+				<div class="page__container">
+					<nav class="breadcrumbs">
+						<ul>
+							<li><a href="">Главная</a></li>
+							<li>Сервис онлайн — проверки документов</li>
+						</ul>
+					</nav>
+					<div class="page__body">
+						@@include('html/aside.html')
+						<section class="page__content check-docs">
+							<h1 class="page-title">Онлайн-проверка документов</h1>
+							<h2 class="page-subtitle">Проверка подлинности документов</h2>
+							<div class="page-text">
+								<p>Сервис предназначен для проверки документов, выданных образовательным центром. В прототипе фиксируем структуру формы и результата. Логика проверки и поля уточняются по ТЗ.</p>
+							</div>
+							<div class="check-docs-form">
+								<h3 class="check-docs-form__title">Введите данные документа</h3>
+								<div class="check-docs-form__descr">
+									<p>Укажите номер документа и дополнительные параметры (если они предусмотрены)</p>
+								</div>
+								<div class="check-docs-form__fields">
+									<label class="input-line">
+										<span class="input-line__descr">Дата выдачи</span>
+										<input class="input-line__input input" type="text" name="form[]" placeholder="ДД.ММ.ГГ">
+									</label>
+									<label class="input-line">
+										<span class="input-line__descr">Фамилия</span>
+										<input class="input-line__input input" type="text" name="form[]" placeholder="Как в документе">
+									</label>
+									<div class="input-line">
+										<span class="input-line__descr">Тип документа</span>
+										<div class="input-line__sel custom-sel">
+											<button class="custom-sel__btn" type="button">Компания</button>
+											<input class="custom-sel__value" type="hidden" name="form[]">
+											<div class="custom-sel__sub">
+												<button type="button">Компания</button>
+												<button type="button">Физическое лицо</button>
+											</div>
+										</div>
+									</div>
+									<label class="input-line">
+										<span class="input-line__descr">Номер документа</span>
+										<input class="input-line__input input" type="text" name="form[]" placeholder="Например: 2025–000123">
+									</label>
+								</div>
+								<div class="check-docs-form__actions">
+									<button class="check-docs-form__btn btn btn_bd" type="reset">Сбростить</button>
+									<button class="check-docs-form__btn btn" type="submit">Применить</button>
+								</div>
+							</div>
+							<h2 class="page-subtitle">Частые вопросы</h2>
+							<ul class="faq__list" data-spollers>
+								<li class="faq-item">
+									<button class="faq-item__btn" type="button" data-spoller>
+										Как проверить подлинность документа?
+									</button>
+									<div class="faq-item__answer">
+										<p>После окончания обучения и успешной аттестации вы получаете документы установленного образца по выбранной программе. Формат и перечень документов зависят от направления и требований к допуску.</p>
+									</div>
+								</li>
+								<li class="faq-item">
+									<button class="faq-item__btn" type="button" data-spoller>
+										Что делать, если документ не найден в реестре?
+									</button>
+									<div class="faq-item__answer">
+										<p>После окончания обучения и успешной аттестации вы получаете документы установленного образца по выбранной программе. Формат и перечень документов зависят от направления и требований к допуску.</p>
+									</div>
+								</li>
+								<li class="faq-item">
+									<button class="faq-item__btn" type="button" data-spoller>
+										Какие параметры нужны для проверки?
+									</button>
+									<div class="faq-item__answer">
+										<p>После окончания обучения и успешной аттестации вы получаете документы установленного образца по выбранной программе. Формат и перечень документов зависят от направления и требований к допуску.</p>
+									</div>
+								</li>
+								<li class="faq-item">
+									<button class="faq-item__btn" type="button" data-spoller>
+										Куда обращаться при ошибке проверки?
+									</button>
+									<div class="faq-item__answer">
+										<p>После окончания обучения и успешной аттестации вы получаете документы установленного образца по выбранной программе. Формат и перечень документов зависят от направления и требований к допуску.</p>
+									</div>
+								</li>
+							</ul>
+						</section>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/footer.html')
+	</div>
+
+	@@include('html/popup.html')
+
+
+	@@include('html/js.html')
+
+</body>
+
+</html>

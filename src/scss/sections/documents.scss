@@ -1,0 +1,231 @@
+.documents {
+	padding: rem(35) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(25) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(20) rem(0);
+	}
+	&__container {
+	}
+	&__head {
+		&:not(:last-child) {
+			margin-bottom: rem(50);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(40);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(25);
+			}
+		}
+	}
+	&__subtitle {
+		font-weight: 600;
+		font-size: rem(32);
+		line-height: math.div(39, 32);
+		@media (max-width: $tablet) {
+			font-size: rem(28);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(24);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(40);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(30);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+	&__top {
+		display: flex;
+		gap: rem(20);
+		@media (max-width: em(1099.98)) {
+			flex-direction: column;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(64);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(40);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(25);
+			}
+		}
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		flex: auto;
+	}
+	&__images {
+		flex: 0 0 percent(1077, 1620);
+		position: relative;
+		padding-left: percent(144, 1077);
+		@media (max-width: em(1099.98)) {
+			flex: auto;
+			width: 100%;
+		}
+	}
+	&__diplom {
+		border-radius: rem(7);
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__doc {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		border-radius: rem(7);
+		overflow: hidden;
+		width: percent(760, 1077);
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__bottom {
+		display: flex;
+		gap: rem(24);
+		@media (max-width: em(1099.98)) {
+			flex-direction: column;
+		}
+	}
+	&__video {
+		flex: 0 0 percent(1070, 1620);
+		@media (max-width: em(1099.98)) {
+			flex: auto;
+			width: 100%;
+		}
+	}
+}
+
+.document-item {
+	border-radius: rem(16);
+	background: #eef1f4;
+	padding: rem(24) rem(20);
+	display: inline-flex;
+	align-items: center;
+	gap: rem(20);
+	@media (max-width: $tablet) {
+		padding: rem(18) rem(16);
+		gap: rem(16);
+	}
+	&:not(:last-child) {
+		margin-bottom: rem(44);
+		@media (max-width: $tablet) {
+			margin-bottom: rem(24);
+		}
+		@media (max-width: $mobile) {
+			margin-bottom: rem(16);
+		}
+	}
+	&__icon {
+		flex: 0 0 rem(68);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			max-width: 100%;
+			height: auto;
+			width: auto;
+		}
+	}
+	&__descr {
+		font-size: rem(20);
+		line-height: math.div(24, 20);
+		color: #000;
+		@media (max-width: $tablet) {
+			font-size: rem(18);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+		}
+	}
+}
+
+.documents-platform {
+	&__title {
+		font-weight: 600;
+		font-size: rem(32);
+		line-height: math.div(39, 32);
+		@media (max-width: $tablet) {
+			font-size: rem(28);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(24);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(15);
+			}
+		}
+	}
+	&__text {
+		font-size: rem(20);
+		line-height: math.div(24, 20);
+		@media (max-width: $tablet) {
+			font-size: rem(18);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__list {
+		display: grid;
+		gap: rem(52);
+		@media (max-width: $tablet) {
+			gap: rem(24);
+		}
+		@media (max-width: $mobile) {
+			gap: rem(16);
+		}
+	}
+}
+
+.platform-item {
+	border: rem(1) solid #d5d5d5;
+	border-radius: rem(16);
+	overflow: hidden;
+	padding: rem(11) rem(24);
+	display: inline-flex;
+	align-items: center;
+	gap: rem(23);
+	@media (max-width: $mobile) {
+		padding: rem(11) rem(16);
+		gap: rem(16);
+	}
+	&__icon {
+		flex: 0 0 rem(80);
+		@media (max-width: $mobile) {
+			flex-basis: rem(56);
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__body {
+		line-height: math.div(22, 18);
+	}
+	&__title {
+		font-weight: 700;
+		&:not(:last-child) {
+			margin-bottom: rem(12);
+		}
+	}
+	&__descr {
+	}
+}

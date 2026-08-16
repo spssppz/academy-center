@@ -1,0 +1,114 @@
+.discount {
+	padding: rem(35) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(25) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(20) rem(0);
+	}
+	&__container {
+	}
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(56);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(40);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(25);
+			}
+		}
+	}
+	&__cols {
+		display: grid;
+		gap: rem(24);
+		@media (min-width: $pc) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: $tablet) {
+			gap: rem(20);
+		}
+		@media (max-width: $mobile) {
+			gap: rem(16);
+		}
+	}
+}
+
+.discount-col {
+	display: flex;
+	gap: rem(24);
+	@media (max-width: $tablet) {
+		gap: rem(16);
+	}
+	@media (max-width: $mobile) {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: rem(12);
+	}
+	&__icon {
+		flex: 0 0 rem(118);
+		width: rem(118);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #eef1f4;
+		border-radius: rem(5);
+		align-self: center;
+		@media (max-width: $tablet) {
+			align-self: flex-start;
+			flex: 0 0 rem(100);
+			width: rem(100);
+		}
+		img {
+			max-width: 100%;
+			width: auto;
+			height: auto;
+		}
+	}
+	&__right {
+		display: flex;
+		flex-direction: column;
+	}
+	&__label {
+		font-weight: 500;
+		font-size: rem(32);
+		line-height: math.div(39, 32);
+		flex: auto;
+		@media (max-width: $tablet) {
+			font-size: rem(28);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(24);
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: rem(20);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(20);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__cap {
+		font-weight: 500;
+		font-size: rem(20);
+		line-height: math.div(24, 20);
+		@media (max-width: $tablet) {
+			font-size: rem(18);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(12);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(8);
+			}
+		}
+	}
+	&__descr {
+		font-size: rem(16);
+		line-height: math.div(19, 16);
+	}
+}
