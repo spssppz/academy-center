@@ -78,7 +78,8 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home"; // Главная
-//
+@import "services";
+@import "service";
 @import "about";
 @import "workers";
 @import "contacts";

@@ -1,7 +1,7 @@
 /* Документация слайдера: https://swiperjs.com/ */
 
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Thumbs } from 'swiper/modules';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay
@@ -65,6 +65,22 @@ function initSliders() {
 				el: '.hero-reviews__pagination',
 				clickable: true,
 			},
+		})
+	}
+	if (document.querySelector('.service-gallery__thumbs') || document.querySelector('.service-gallery__main')) {
+		const serviceSliderThumbs = new Swiper('.service-gallery__thumbs', {
+			slidesPerView: 'auto',
+			spaceBetween: 0,
+			speed: 800,
+		})
+		const serviceSliderMain = new Swiper('.service-gallery__main', {
+			modules: [Thumbs],
+			slidesPerView: 'auto',
+			spaceBetween: 0,
+			speed: 800,
+			thumbs: {
+				swiper: serviceSliderThumbs,
+			}
 		})
 	}
 }

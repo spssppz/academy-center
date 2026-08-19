@@ -10,7 +10,7 @@ flsFunctions.isWebp();
 // flsFunctions.addLoadedClass();
 
 /* Модули для работы с меню (Бургер) */
-// flsFunctions.menuInit();
+flsFunctions.menuInit();
 // flsFunctions.closeMenuWithSwipe();
 
 /* Модуль для плавной прокрутки к якорям */
@@ -80,6 +80,9 @@ import "./files/video.js";
 
 /* Модуль кастомного select'а. Сниппет (HTML): custom-sel */
 import "./files/custom-select.js";
+
+/* Модуль кастомного input[type=file]. Сниппет (HTML): file-input */
+import "./files/file-input.js";
 
 
 /* 

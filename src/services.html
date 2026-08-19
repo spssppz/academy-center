@@ -10,7 +10,277 @@
 	<div class="wrapper">
 		@@include('html/header.html')
 		<main>
-			<!--  -->
+			@@include('html/sections/main/hero.html')
+			<section class="services">
+				<div class="services__container">
+					<form class="services__search professions-search" action="#">
+						<input class="professions-search__input" type="text" name="search" placeholder="Введите название профессии">
+					</form>
+					<div class="services__body">
+						<aside class="menu-aside services__aside">
+							<nav class="menu-aside__nav">
+								<ul class="menu-aside__list">
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Автоматчик</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link menu-aside__link_active" href="">Автослесарь</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Агент</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Аппаратчик</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Бригадир</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Бурильщик</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Бурильщик</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Бурильщик</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Вакуумщик</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Вакуумщик</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Вакуумщик</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Вальцовщик</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Водитель погрузчика</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Горнорабочий</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Горнорабочий</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Горнорабочий</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Грузчик</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Дежурный</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Дежурный</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Дефлектоскопист</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Дозировщик</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Дозировщик</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Дробильщик</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Дробильщик</a></li>
+									<li class="menu-aside__item"><a class="menu-aside__link" href="">Заготовщик</a></li>
+								</ul>
+							</nav>
+						</aside>
+						<ul class="services__list">
+							<li class="course-card">
+								<div class="course-card__image">
+									<span class="course-card__badge">Популярный курс</span>
+									<img srcset="@img/services/diplom@2x.jpg 2x" src="@img/services/diplom.jpg" width="385" height="251" loading="lazy" alt="">
+								</div>
+								<div class="course-card__main">
+									<div class="course-card__top">
+										<h3 class="course-card__title">Сварщики</h3>
+										<div class="course-card__status">Запись открыта</div>
+									</div>
+									<ul class="course-card__params">
+										<li class="course-card__param">
+											<span>Группа:</span>
+											<span>Автоматчик</span>
+										</li>
+										<li class="course-card__param">
+											<span>Уровень:</span>
+											<span>после 9-ого или 11-ого класса</span>
+										</li>
+										<li class="course-card__param">
+											<span>Получаемый документ:</span>
+											<span>Свидетельство, удостоверение (корочки), протокол аттестации</span>
+										</li>
+										<li class="course-card__param">
+											<span>Формат:</span>
+											<span>Дистанционно (онлайн) / Очно с практикой / Заочно</span>
+										</li>
+									</ul>
+								</div>
+								<div class="course-card__order">
+									<div class="service-order__price-label">Цена за курс</div>
+									<div class="service-order__price-value">19 900 ₽</div>
+									<div class="service-order__price-row">
+										<div class="service-order__price-old">от 24 900 ₽</div>
+										<div class="service-order__price-discount">- 5000 ₽</div>
+									</div>
+									<div class="course-card__btns">
+										<a class="course-card__btn btn btn_bd" href="">Подробнее</a>
+										<a class="course-card__btn btn" href="">Записаться</a>
+									</div>
+								</div>
+							</li>
+							<li class="course-card">
+								<div class="course-card__image">
+									<span class="course-card__badge">Популярный курс</span>
+									<img srcset="@img/services/diplom@2x.jpg 2x" src="@img/services/diplom.jpg" width="385" height="251" loading="lazy" alt="">
+								</div>
+								<div class="course-card__main">
+									<div class="course-card__top">
+										<h3 class="course-card__title">Сварщики</h3>
+										<div class="course-card__status">Запись открыта</div>
+									</div>
+									<ul class="course-card__params">
+										<li class="course-card__param">
+											<span>Группа:</span>
+											<span>Автоматчик</span>
+										</li>
+										<li class="course-card__param">
+											<span>Уровень:</span>
+											<span>после 9-ого или 11-ого класса</span>
+										</li>
+										<li class="course-card__param">
+											<span>Получаемый документ:</span>
+											<span>Свидетельство, удостоверение (корочки), протокол аттестации</span>
+										</li>
+										<li class="course-card__param">
+											<span>Формат:</span>
+											<span>Дистанционно (онлайн) / Очно с практикой / Заочно</span>
+										</li>
+									</ul>
+								</div>
+								<div class="course-card__order">
+									<div class="service-order__price-label">Цена за курс</div>
+									<div class="service-order__price-value">19 900 ₽</div>
+									<div class="service-order__price-row">
+										<div class="service-order__price-old">от 24 900 ₽</div>
+										<div class="service-order__price-discount">- 5000 ₽</div>
+									</div>
+									<div class="course-card__btns">
+										<a class="course-card__btn btn btn_bd" href="">Подробнее</a>
+										<a class="course-card__btn btn" href="">Записаться</a>
+									</div>
+								</div>
+							</li>
+							<li class="course-card">
+								<div class="course-card__image">
+									<span class="course-card__badge">Популярный курс</span>
+									<img srcset="@img/services/diplom@2x.jpg 2x" src="@img/services/diplom.jpg" width="385" height="251" loading="lazy" alt="">
+								</div>
+								<div class="course-card__main">
+									<div class="course-card__top">
+										<h3 class="course-card__title">Сварщики</h3>
+										<div class="course-card__status">Запись открыта</div>
+									</div>
+									<ul class="course-card__params">
+										<li class="course-card__param">
+											<span>Группа:</span>
+											<span>Автоматчик</span>
+										</li>
+										<li class="course-card__param">
+											<span>Уровень:</span>
+											<span>после 9-ого или 11-ого класса</span>
+										</li>
+										<li class="course-card__param">
+											<span>Получаемый документ:</span>
+											<span>Свидетельство, удостоверение (корочки), протокол аттестации</span>
+										</li>
+										<li class="course-card__param">
+											<span>Формат:</span>
+											<span>Дистанционно (онлайн) / Очно с практикой / Заочно</span>
+										</li>
+									</ul>
+								</div>
+								<div class="course-card__order">
+									<div class="service-order__price-label">Цена за курс</div>
+									<div class="service-order__price-value">19 900 ₽</div>
+									<div class="service-order__price-row">
+										<div class="service-order__price-old">от 24 900 ₽</div>
+										<div class="service-order__price-discount">- 5000 ₽</div>
+									</div>
+									<div class="course-card__btns">
+										<a class="course-card__btn btn btn_bd" href="">Подробнее</a>
+										<a class="course-card__btn btn" href="">Записаться</a>
+									</div>
+								</div>
+							</li>
+							<li class="course-card">
+								<div class="course-card__image">
+									<span class="course-card__badge">Популярный курс</span>
+									<img srcset="@img/services/diplom@2x.jpg 2x" src="@img/services/diplom.jpg" width="385" height="251" loading="lazy" alt="">
+								</div>
+								<div class="course-card__main">
+									<div class="course-card__top">
+										<h3 class="course-card__title">Сварщики</h3>
+										<div class="course-card__status">Запись открыта</div>
+									</div>
+									<ul class="course-card__params">
+										<li class="course-card__param">
+											<span>Группа:</span>
+											<span>Автоматчик</span>
+										</li>
+										<li class="course-card__param">
+											<span>Уровень:</span>
+											<span>после 9-ого или 11-ого класса</span>
+										</li>
+										<li class="course-card__param">
+											<span>Получаемый документ:</span>
+											<span>Свидетельство, удостоверение (корочки), протокол аттестации</span>
+										</li>
+										<li class="course-card__param">
+											<span>Формат:</span>
+											<span>Дистанционно (онлайн) / Очно с практикой / Заочно</span>
+										</li>
+									</ul>
+								</div>
+								<div class="course-card__order">
+									<div class="service-order__price-label">Цена за курс</div>
+									<div class="service-order__price-value">19 900 ₽</div>
+									<div class="service-order__price-row">
+										<div class="service-order__price-old">от 24 900 ₽</div>
+										<div class="service-order__price-discount">- 5000 ₽</div>
+									</div>
+									<div class="course-card__btns">
+										<a class="course-card__btn btn btn_bd" href="">Подробнее</a>
+										<a class="course-card__btn btn" href="">Записаться</a>
+									</div>
+								</div>
+							</li>
+							<li class="course-card">
+								<div class="course-card__image">
+									<span class="course-card__badge">Популярный курс</span>
+									<img srcset="@img/services/diplom@2x.jpg 2x" src="@img/services/diplom.jpg" width="385" height="251" loading="lazy" alt="">
+								</div>
+								<div class="course-card__main">
+									<div class="course-card__top">
+										<h3 class="course-card__title">Сварщики</h3>
+										<div class="course-card__status">Запись открыта</div>
+									</div>
+									<ul class="course-card__params">
+										<li class="course-card__param">
+											<span>Группа:</span>
+											<span>Автоматчик</span>
+										</li>
+										<li class="course-card__param">
+											<span>Уровень:</span>
+											<span>после 9-ого или 11-ого класса</span>
+										</li>
+										<li class="course-card__param">
+											<span>Получаемый документ:</span>
+											<span>Свидетельство, удостоверение (корочки), протокол аттестации</span>
+										</li>
+										<li class="course-card__param">
+											<span>Формат:</span>
+											<span>Дистанционно (онлайн) / Очно с практикой / Заочно</span>
+										</li>
+									</ul>
+								</div>
+								<div class="course-card__order">
+									<div class="service-order__price-label">Цена за курс</div>
+									<div class="service-order__price-value">19 900 ₽</div>
+									<div class="service-order__price-row">
+										<div class="service-order__price-old">от 24 900 ₽</div>
+										<div class="service-order__price-discount">- 5000 ₽</div>
+									</div>
+									<div class="course-card__btns">
+										<a class="course-card__btn btn btn_bd" href="">Подробнее</a>
+										<a class="course-card__btn btn" href="">Записаться</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<div class="services-page">
+				<div class="services-page__container">
+					<div class="services-page__body">
+						@@include('html/sections/cost.html')
+						@@include('html/sections/you-get.html')
+						@@include('html/sections/discount.html')
+						<!--  -->
+						@@include('html/sections/licenses.html')
+						@@include('html/sections/video-reviews.html')
+						@@include('html/sections/education.html')
+						@@include('html/sections/reviews.html')
+						@@include('html/sections/learning.html')
+						@@include('html/sections/students.html')
+						@@include('html/sections/faq.html')
+					</div>
+				</div>
+			</div>
+			@@include('html/sections/offices.html')
 		</main>
 		@@include('html/footer.html')
 	</div>

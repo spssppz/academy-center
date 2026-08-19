@@ -7,6 +7,9 @@
 		padding: rem(20) rem(0);
 	}
 	&__container {
+		.services-page & {
+			padding: 0;
+		}
 	}
 	&__head {
 		&:not(:last-child) {
@@ -22,6 +25,15 @@
 		@media (max-width: $tablet) {
 			flex-direction: column;
 		}
+		.services-page & {
+			flex-direction: column;
+			@media (max-width: $pc) {
+				flex-direction: row;
+			}
+			@media (max-width: $tablet) {
+				flex-direction: column;
+			}
+		}
 	}
 	&__image {
 		flex: 0 0 percent(798, 1620);
@@ -36,8 +48,12 @@
 	&__right {
 		display: flex;
 		flex-direction: column;
-		@media (min-width: $pc) {
-			padding-top: rem(40);
+		padding-top: rem(40);
+		@media (max-width: $pc) {
+			padding-top: 0;
+		}
+		.services-page & {
+			padding-top: 0;
 		}
 	}
 	&__list {

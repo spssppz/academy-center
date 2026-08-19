@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(node -e ' *)",
-      "Bash(file src/img/workers/*.jpg)"
+      "Bash(file src/img/workers/*.jpg)",
+      "Bash(node --check src/js/files/file-input.js)"
     ]
   }
 }

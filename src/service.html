@@ -10,13 +10,149 @@
 	<div class="wrapper">
 		@@include('html/header.html')
 		<main>
-			<!--  -->
+			<section class="service">
+				<div class="service__container">
+					<div class="service__head">
+						<h3 class="label">Страница услуги</h3>
+						<h1 class="title">Аппаратчик (пример услуги) — обучение / аттестация</h1>
+					</div>
+					<div class="service__body">
+						<div class="service-gallery">
+							<div class="service-gallery__main swiper">
+								<ul class="service-gallery__main-wrapper swiper-wrapper">
+									<li class="service-gallery__main-slide swiper-slide">
+										<img srcset="@img/service/main-1@2x.jpg 2x" src="@img/service/main-1.jpg" width="525" height="467" fetchpriority="high" alt="">
+									</li>
+									<li class="service-gallery__main-slide swiper-slide">
+										<img srcset="@img/service/main-1@2x.jpg 2x" src="@img/service/main-1.jpg" width="525" height="467" fetchpriority="high" alt="">
+									</li>
+									<li class="service-gallery__main-slide swiper-slide">
+										<img srcset="@img/service/main-1@2x.jpg 2x" src="@img/service/main-1.jpg" width="525" height="467" fetchpriority="high" alt="">
+									</li>
+									<li class="service-gallery__main-slide swiper-slide">
+										<img srcset="@img/service/main-1@2x.jpg 2x" src="@img/service/main-1.jpg" width="525" height="467" fetchpriority="high" alt="">
+									</li>
+									<li class="service-gallery__main-slide swiper-slide">
+										<img srcset="@img/service/main-1@2x.jpg 2x" src="@img/service/main-1.jpg" width="525" height="467" fetchpriority="high" alt="">
+									</li>
+								</ul>
+							</div>
+							<div class="service-gallery__thumbs swiper">
+								<ul class="service-gallery__thumbs-wrapper swiper-wrapper">
+									<li class="service-gallery__thumbs-slide swiper-slide">
+										<img srcset="@img/service/thumb-1@2x.jpg 2x" src="@img/service/thumb-1.jpg" width="126" height="87" loading="lazy" alt="">
+									</li>
+									<li class="service-gallery__thumbs-slide swiper-slide">
+										<img srcset="@img/service/thumb-2@2x.jpg 2x" src="@img/service/thumb-2.jpg" width="125" height="87" loading="lazy" alt="">
+									</li>
+									<li class="service-gallery__thumbs-slide swiper-slide">
+										<img srcset="@img/service/thumb-3@2x.jpg 2x" src="@img/service/thumb-3.jpg" width="125" height="87" loading="lazy" alt="">
+									</li>
+									<li class="service-gallery__thumbs-slide swiper-slide">
+										<img srcset="@img/service/thumb-4@2x.jpg 2x" src="@img/service/thumb-4.jpg" width="126" height="87" loading="lazy" alt="">
+									</li>
+									<li class="service-gallery__thumbs-slide swiper-slide">
+										<img srcset="@img/service/thumb-4@2x.jpg 2x" src="@img/service/thumb-4.jpg" width="126" height="87" loading="lazy" alt="">
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="service-info">
+							<div class="service-info__duration">
+								<span class="service-info__duration-label">Продолжительность (ак.ч):</span>
+								<span class="service-info__duration-value">144 ак.ч</span>
+							</div>
+							<ul class="service-info__options">
+								<li class="service-info__option">
+									<button type="button">36 ак.ч</button>
+								</li>
+								<li class="service-info__option">
+									<button type="button">72 ак.ч</button>
+								</li>
+								<li class="service-info__option">
+									<button type="button">108 ак.ч</button>
+								</li>
+								<li class="service-info__option service-info__option_active">
+									<button type="button">144 ак.ч</button>
+								</li>
+							</ul>
+							<div class="service-info__badge">Разряды: 1-7</div>
+							<ul class="service-info__params">
+								<li class="service-info__param">Документы: свидетельство \ удостоверение</li>
+								<li class="service-info__param">Формат: дистанционно / очно</li>
+								<li class="service-info__param">Рассрочка 0%</li>
+							</ul>
+							<h3 class="service-info__descr-title">Описание:</h3>
+							<div class="service-info__descr">
+								<p>Обучение по профессии «Аппаратчик» с последующей аттестацией и выдачей официальных документов установленного образца. Подготовка проводится дистанционно или очно, в соответствии с действующими требованиями.</p>
+							</div>
+							<div class="service-rating">
+								<div class="service-rating__value">4,9</div>
+								<div class="service-rating__rating">
+									<div class="service-rating__stars rating" data-rating="5">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input class="rating__item" type="radio" value="1" name="service-rating">
+												<input class="rating__item" type="radio" value="2" name="service-rating">
+												<input class="rating__item" type="radio" value="3" name="service-rating">
+												<input class="rating__item" type="radio" value="4" name="service-rating">
+												<input class="rating__item" type="radio" value="5" name="service-rating">
+											</div>
+										</div>
+									</div>
+									<div class="service-rating__descr">На основе 128 отзывов Yandex и Отзовик</div>
+								</div>
+							</div>
+							<div class="service-info__links">
+								<a class="service-info__link" href="">
+									<img src="@img/icons/reviews-icon.svg" width="40" height="40" loading="lazy" alt="">
+									<span>Читать отзывы</span>
+								</a>
+								<a class="service-info__link" href="">
+									<img src="@img/icons/video-icon.svg" width="40" height="40" loading="lazy" alt="">
+									<span>Видео отзывы</span>
+								</a>
+							</div>
+						</div>
+						<div class="service-order">
+							<div class="service-order__prices">
+								<div class="service-order__price">
+									<div class="service-order__price-label">Цена за курс</div>
+									<div class="service-order__price-value">19 900 ₽</div>
+									<div class="service-order__price-row">
+										<div class="service-order__price-old">от 24 900 ₽</div>
+										<div class="service-order__price-discount">- 5000 ₽</div>
+									</div>
+								</div>
+								<div class="service-order__price">
+									<div class="service-order__price-label">Рассрочка 0%</div>
+									<div class="service-order__price-value">от 470 ₽ \ мес</div>
+									<a class="service-order__price-link" href="">Подробнее</a>
+								</div>
+							</div>
+							<h3 class="service-order__title">Записаться на курс</h3>
+							<form class="service-order-form" action="#">
+								<input class="service-order-form__input input" type="text" name="form[]" placeholder="Ваше имя">
+								<div class="service-order-form__input-wrapper">
+									<input class="service-order-form__input service-order-form__input_phone input phone" type="tel" name="form[]" placeholder="+7 (___) ___-__-__">
+								</div>
+								<button class="service-order-form__btn btn" type="submit">Узнать подробнее</button>
+								<label class="checkbox">
+									<input class="checkbox__input" type="checkbox" value="1" name="form[]" checked>
+									<span class="checkbox__text">Я ознакомлен с политикой в отношении обработки персональных данных и даю согласие на обработку персональных данных.</span>
+								</label>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
 			@@include('html/sections/advantages.html')
 			@@include('html/sections/documents.html')
 			@@include('html/sections/help-choosing.html')
 			@@include('html/sections/cost.html')
 			@@include('html/sections/you-get.html')
-			<!-- @@include('html/sections/solutions.html') -->
+			@@include('html/sections/service/solutions.html')
 			@@include('html/sections/discount.html')
 			@@include('html/sections/edu-cost.html')
 			@@include('html/sections/licenses.html')

@@ -7,6 +7,9 @@
 		padding: rem(20) rem(0);
 	}
 	&__container {
+		.services-page & {
+			padding: 0;
+		}
 	}
 	&__top {
 		display: flex;
@@ -46,6 +49,15 @@
 		@media (max-width: em(1199.98)) {
 			grid-template-columns: 1fr;
 			gap: rem(20);
+		}
+		.services-page & {
+			grid-template-columns: 1fr;
+			@media (max-width: $tablet) {
+				grid-template-columns: 1fr 1fr;
+			}
+			@media (max-width: em(1199.98)) {
+				grid-template-columns: 1fr;
+			}
 		}
 	}
 	&__video {

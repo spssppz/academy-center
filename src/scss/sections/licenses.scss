@@ -14,7 +14,16 @@
 	@media (max-width: $mobileSmall) {
 		padding: rem(30) rem(0);
 	}
+	.services-page & {
+		@media (min-width: $pc) {
+			background: none;
+			padding: 0;
+		}
+	}
 	&__container {
+		.services-page & {
+			padding: 0;
+		}
 	}
 	&__head {
 		&:not(:last-child) {

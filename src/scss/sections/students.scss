@@ -8,6 +8,9 @@
 		padding: rem(20) rem(0);
 	}
 	&__container {
+		.services-page & {
+			padding: 0;
+		}
 	}
 	&__head {
 		&:not(:last-child) {

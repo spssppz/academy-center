@@ -7,6 +7,9 @@
 		padding: rem(20) rem(0);
 	}
 	&__container {
+		.services-page & {
+			padding: 0;
+		}
 	}
 	&__head {
 		&:not(:last-child) {
@@ -28,6 +31,15 @@
 		}
 		@media (max-width: $mobile) {
 			gap: rem(16);
+		}
+		.services-page & {
+			flex-direction: column;
+			@media (max-width: $pc) {
+				flex-direction: row;
+			}
+			@media (max-width: $tablet) {
+				flex-direction: column;
+			}
 		}
 	}
 	&__list {

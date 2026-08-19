@@ -274,3 +274,122 @@
 		}
 	}
 }
+
+//========================================================================================================================================================
+
+.sol-education {
+	display: flex;
+	gap: rem(30);
+	@media (max-width: $pc) {
+		gap: rem(24);
+	}
+	@media (max-width: em(1299.98)) {
+		flex-direction: column;
+	}
+	&__left {
+		flex: auto;
+	}
+	&__title {
+		font-weight: 700;
+		font-size: rem(32);
+		line-height: math.div(39, 32);
+		@media (max-width: $tablet) {
+			font-size: rem(28);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(24);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(30);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+	&__right {
+		flex: 0 0 percent(930, 1620);
+		@media (max-width: $pc) {
+			flex: auto;
+			width: 100%;
+		}
+	}
+}
+
+.sol-education-list {
+	&:not(:last-child) {
+		margin-bottom: rem(55);
+		@media (max-width: $tablet) {
+			margin-bottom: rem(36);
+		}
+		@media (max-width: $mobile) {
+			margin-bottom: rem(24);
+		}
+	}
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: rem(30);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+	&__title {
+		font-weight: 600;
+		font-size: rem(20);
+		line-height: math.div(24, 20);
+		position: relative;
+		padding-left: rem(30);
+		@media (max-width: $mobile) {
+			font-size: rem(18);
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: rem(10);
+			transform: translate(0, -50%);
+			width: rem(6);
+			height: rem(6);
+			border-radius: 50%;
+			background: currentColor;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(8);
+		}
+	}
+	&__descr {
+		font-size: rem(16);
+		line-height: math.div(19, 16);
+		padding-left: rem(66);
+		@media (max-width: $mobile) {
+			padding-left: rem(30);
+		}
+	}
+}
+
+.sol-education-form {
+	background: #eef1f4;
+	border-radius: rem(16);
+	padding: rem(32) rem(24);
+	display: grid;
+	gap: rem(24);
+	@media (max-width: $tablet) {
+		padding: rem(24) rem(20);
+		gap: rem(20);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(20) rem(16);
+		gap: rem(16);
+	}
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: rem(20);
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+			gap: rem(16);
+		}
+	}
+	&__btn {
+	}
+}
