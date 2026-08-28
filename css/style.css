@@ -7575,11 +7575,6 @@ a.service-order__price-link {
     gap: 1.25rem;
   }
 
-  .services .video-reviews__body {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
-
   .services .faq__body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -8294,11 +8289,6 @@ a.service-order__price-link {
 
   .video-reviews {
     padding: 1.5625rem 0rem;
-  }
-
-  .services .video-reviews__body {
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
   }
 
   .video-reviews__thumbs {
