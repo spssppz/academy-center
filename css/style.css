@@ -204,9 +204,20 @@ address {
 input[type=text],
 input[type=email],
 input[type=tel],
+input[type=search],
 textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
+}
+
+input[type=search] {
+  -moz-appearance: textfield;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
   appearance: none;
 }
 
@@ -1204,10 +1215,6 @@ body::after {
 
 .professions__filter:not(:last-child) {
   margin-bottom: 1.875rem;
-}
-
-.professions__slider:not(:last-child) {
-  margin-bottom: 1.5rem;
 }
 
 .professions__cols {
@@ -2419,6 +2426,9 @@ body::after {
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
+  display: -ms-grid;
+  display: grid;
+  gap: 3.4375rem;
 }
 
 .sol-education__title {
@@ -2435,10 +2445,6 @@ body::after {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 57.4074074074%;
           flex: 0 0 57.4074074074%;
-}
-
-.sol-education-list:not(:last-child) {
-  margin-bottom: 3.4375rem;
 }
 
 .sol-education-list__item:not(:last-child) {
@@ -3605,12 +3611,16 @@ body::after {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 17.5rem;
           flex: 1 1 17.5rem;
+  min-width: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   gap: 1.5rem;
 }
 
@@ -3669,6 +3679,7 @@ body::after {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 10rem;
           flex: 1 1 10rem;
+  min-width: 0;
   position: relative;
 }
 
@@ -3878,11 +3889,8 @@ body::after {
   width: 100%;
   font-family: inherit;
   text-align: left;
-  font-size: 0.875rem;
+  font-size: 1.25rem;
   line-height: 1.2142857143;
-  padding: 0.5rem 0.5625rem;
-  border: 0.0625rem solid #e6eaf0;
-  border-radius: 0.3125rem;
 }
 
 .menu__extra-items li._has-second button {
@@ -4596,10 +4604,6 @@ a.footer__nav-link_underline {
   gap: 1.5rem;
 }
 
-.hero-form:not(:last-child) {
-  margin-bottom: 1.125rem;
-}
-
 .hero-form__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5223,7 +5227,6 @@ a.footer__nav-link_underline {
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
-  padding: 1rem 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5261,6 +5264,18 @@ a.footer__nav-link_underline {
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
+  padding: 1rem 1.5rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .catalog-col__label {
@@ -5289,6 +5304,15 @@ a.footer__nav-link_underline {
 .catalog-col__btn {
   font-size: 0.625rem;
   padding: 0.5rem 1.0625rem;
+}
+
+.catalog-col__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .catalog-col__count {
@@ -5554,7 +5578,7 @@ a.footer__nav-link_underline {
   margin-right: 0.4375rem;
 }
 
-.service-info {
+.service-info__left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5565,6 +5589,15 @@ a.footer__nav-link_underline {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+.service-info__right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
 }
 
 .service-info__duration {
@@ -5655,6 +5688,10 @@ a.footer__nav-link_underline {
   padding: 0.6875rem 1rem;
 }
 
+.service-info__mob:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
 .service-info__descr-title {
   font-size: 1.25rem;
   line-height: 1.2;
@@ -5668,10 +5705,6 @@ a.footer__nav-link_underline {
 .service-info__descr {
   font-size: 1rem;
   line-height: 1.1875;
-}
-
-.service-info__descr:not(:last-child) {
-  margin-bottom: 1.5rem;
 }
 
 .service-info__links {
@@ -7124,20 +7157,24 @@ a.service-order__price-link {
     max-width: 20rem;
   }
 
+  .menu__extra-items {
+    display: none;
+  }
+
   .footer__partner {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 12.125rem;
             flex: 0 0 12.125rem;
   }
 
+  .hero-form:not(:last-child) {
+    margin-bottom: 1.125rem;
+  }
+
   .services__body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-  }
-
-  .contacts__left {
-    padding-bottom: 2rem;
   }
 }
 
@@ -7150,6 +7187,12 @@ a.service-order__price-link {
   .about-stat_wide {
     -ms-grid-column-span: 3;
     grid-column: span 3;
+  }
+}
+
+@media (min-width: 87.49875em) {
+  .service-info__right {
+    display: none;
   }
 }
 
@@ -7175,6 +7218,10 @@ a.service-order__price-link {
 
   .services-page__body {
     padding-left: 25.6875rem;
+  }
+
+  .contacts__left {
+    padding-bottom: 2rem;
   }
 }
 
@@ -7345,6 +7392,10 @@ a.service-order__price-link {
             flex: 0 0 26.25rem;
   }
 
+  .contacts + .offices {
+    padding: 3.75rem 0 7.5rem;
+  }
+
   .offices__cols {
     padding: 2.5rem 2rem;
   }
@@ -7451,6 +7502,10 @@ a.service-order__price-link {
     gap: 1rem;
   }
 
+  .contacts {
+    padding: 0.75rem 0rem 3.75rem;
+  }
+
   .guarantees {
     gap: 1.5rem 1.25rem;
   }
@@ -7524,6 +7579,17 @@ a.service-order__price-link {
     max-width: 32.8125rem;
     margin: 0 auto;
   }
+
+  .service-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.875rem;
+  }
+
+  .service-info__mob {
+    display: none;
+  }
 }
 
 @media (max-width: 81.24875em) {
@@ -7532,6 +7598,12 @@ a.service-order__price-link {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .sol-education__left {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.25rem;
   }
 
   .coop__body {
@@ -7802,7 +7874,6 @@ a.service-order__price-link {
 
   .professions {
     padding: 1.5625rem 0rem;
-    overflow: hidden;
   }
 
   .professions__head:not(:last-child) {
@@ -7824,25 +7895,10 @@ a.service-order__price-link {
     margin-bottom: 1.5rem;
   }
 
-  .professions__slider {
-    overflow: visible;
-  }
-
-  .professions__slider:not(:last-child) {
-    margin-bottom: 1.25rem;
-  }
-
   .professions__cols {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-  }
-
-  .professions__slider .professions__cols {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 0;
   }
 
   .professions__cols:not(:last-child) {
@@ -7855,16 +7911,6 @@ a.service-order__price-link {
 
   .professions-alphabet__list {
     gap: 0.5rem;
-  }
-
-  .professions__slider .profession {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc((100% - 1rem) / 2);
-            flex: 0 0 calc((100% - 1rem) / 2);
-  }
-
-  .professions__slider .profession:not(:last-child) {
-    margin-right: 1rem;
   }
 
   .profession__body {
@@ -8122,12 +8168,13 @@ a.service-order__price-link {
     font-size: 1.25rem;
   }
 
-  .sol-education__title {
-    font-size: 1.75rem;
+  .sol-education__left {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
-  .sol-education-list:not(:last-child) {
-    margin-bottom: 2.25rem;
+  .sol-education__title {
+    font-size: 1.75rem;
   }
 
   .sol-education-form {
@@ -8426,7 +8473,7 @@ a.service-order__price-link {
   }
 
   .contacts + .offices {
-    padding: 3.75rem 0 7.5rem;
+    padding: 2.5rem 0 7.5rem;
   }
 
   .offices {
@@ -8510,6 +8557,10 @@ a.service-order__price-link {
     gap: 1.25rem;
   }
 
+  .menu__list:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+
   .menu__item {
     width: 100%;
   }
@@ -8555,6 +8606,14 @@ a.service-order__price-link {
     margin-top: 2rem;
     padding-top: 1.5rem;
     border-top: 0.0625rem solid #e6eaf0;
+  }
+
+  .menu__extra-items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.25rem;
   }
 
   .menu__second {
@@ -8675,7 +8734,7 @@ a.service-order__price-link {
   }
 
   .hero__tags {
-    gap: 0.5rem;
+    display: none;
   }
 
   .hero__right {
@@ -8781,10 +8840,6 @@ a.service-order__price-link {
     margin-bottom: 1.25rem;
   }
 
-  .catalog {
-    padding: 1.5625rem 0rem;
-  }
-
   .catalog__cols {
     gap: 1.25rem;
     -ms-grid-columns: 1fr 1fr;
@@ -8792,8 +8847,11 @@ a.service-order__price-link {
   }
 
   .catalog-col {
-    padding: 1rem 1.25rem;
     border-radius: 0.75rem;
+  }
+
+  .catalog-col__body {
+    padding: 1rem 1.25rem;
   }
 
   .catalog-col__label {
@@ -8916,7 +8974,7 @@ a.service-order__price-link {
   }
 
   .select-program {
-    padding: 7.5rem 0rem 2.5rem;
+    padding: 5rem 0rem 2.5rem;
   }
 
   .select-program__body {
@@ -8937,10 +8995,6 @@ a.service-order__price-link {
 
   .select-program__image {
     display: none;
-  }
-
-  .contacts {
-    padding: 0.75rem 0rem 3.75rem;
   }
 
   .contacts__head:not(:last-child) {
@@ -9249,10 +9303,6 @@ a.service-order__price-link {
     margin-bottom: 1rem;
   }
 
-  .professions__slider:not(:last-child) {
-    margin-bottom: 1rem;
-  }
-
   .professions__cols {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -9270,12 +9320,6 @@ a.service-order__price-link {
   .professions-alphabet__link {
     font-size: 0.875rem;
     padding: 0.4375rem;
-  }
-
-  .professions__slider .profession {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 17.5rem;
-            flex: 0 0 17.5rem;
   }
 
   .profession__body {
@@ -9609,16 +9653,16 @@ a.service-order__price-link {
     width: 100%;
   }
 
+  .sol-education__left {
+    gap: 1.5rem;
+  }
+
   .sol-education__title {
     font-size: 1.5rem;
   }
 
   .sol-education__title:not(:last-child) {
     margin-bottom: 1.25rem;
-  }
-
-  .sol-education-list:not(:last-child) {
-    margin-bottom: 1.5rem;
   }
 
   .sol-education-list__item:not(:last-child) {
@@ -10038,10 +10082,6 @@ a.service-order__price-link {
     grid-template-columns: 1fr;
   }
 
-  .hero-form:not(:last-child) {
-    margin-bottom: 0.75rem;
-  }
-
   .hero-form__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -10128,15 +10168,34 @@ a.service-order__price-link {
 
   .catalog {
     padding: 1.25rem 0rem;
+    overflow: hidden;
+  }
+
+  .catalog__slider {
+    overflow: visible;
   }
 
   .catalog__cols {
-    gap: 1rem;
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+    gap: 0;
   }
 
-  .catalog-col {
+  .catalog__slider .catalog__cols {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .catalog__slider .catalog-col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 17.5rem;
+            flex: 0 0 17.5rem;
+  }
+
+  .catalog__slider .catalog-col:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  .catalog-col__body {
     padding: 0.75rem 1rem;
   }
 
@@ -10178,6 +10237,14 @@ a.service-order__price-link {
 
   .service__head:not(:last-child) {
     margin-bottom: 1.5rem;
+  }
+
+  .service-info__right {
+    display: none;
+  }
+
+  .service-info__mob {
+    display: block;
   }
 
   .service-info__duration {
@@ -10298,7 +10365,7 @@ a.service-order__price-link {
   }
 
   .select-program {
-    padding: 6.25rem 0rem 1.875rem;
+    padding: 3.75rem 0rem 1.875rem;
   }
 
   .select-program__body {
