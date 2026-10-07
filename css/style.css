@@ -6071,13 +6071,63 @@ a.service-order__price-link {
   width: 100%;
 }
 
-.about-intro__content {
+.about-intro__list {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.25rem 2.5rem;
+}
+
+.about-intro__list:not(:last-child) {
+  margin-bottom: 1.875rem;
+}
+
+.about-intro__text {
   line-height: 1.2;
   color: #000;
 }
 
-.about-intro__content p:not(:last-child) {
+.about-intro__text p:not(:last-child) {
   margin-bottom: 1em;
+}
+
+.about-intro-item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  gap: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.1875;
+  color: #000;
+}
+
+.about-intro-item__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 4rem;
+          flex: 0 0 4rem;
+  width: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-intro-item__icon img {
+  width: 100%;
+  height: auto;
 }
 
 .about-cards {
@@ -7276,6 +7326,11 @@ a.service-order__price-link {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 55.8558558559%;
             flex: 0 0 55.8558558559%;
+  }
+
+  .about-intro__list {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -10126,6 +10181,26 @@ a.service-order__price-link {
     margin-bottom: 2.1875vw;
   }
 
+  .about-intro__list {
+    gap: 1.0416666667vw 2.0833333333vw;
+  }
+
+  .about-intro__list:not(:last-child) {
+    margin-bottom: 1.5625vw;
+  }
+
+  .about-intro-item {
+    gap: 0.2083333333vw;
+    font-size: 0.8333333333vw;
+  }
+
+  .about-intro-item__icon {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 3.3333333333vw;
+            flex: 0 0 3.3333333333vw;
+    width: 3.3333333333vw;
+  }
+
   .about-cards {
     gap: 1.71875vw 1.3020833333vw;
   }
@@ -11094,6 +11169,10 @@ a.service-order__price-link {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .about-intro__list {
+    gap: 1.5rem 2.5rem;
   }
 
   .about-cards {
@@ -14079,6 +14158,10 @@ a.service-order__price-link {
 
   .about-intro__image:not(:last-child) {
     margin-bottom: 1.25rem;
+  }
+
+  .about-intro__list:not(:last-child) {
+    margin-bottom: 1.5625rem;
   }
 
   .about-cards {
