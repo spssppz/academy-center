@@ -766,13 +766,31 @@ body::after {
 }
 
 .label {
+  --dash: 6px;
+  --gap: 6px;
+  --line: 1px;
+  --color: #898989;
+  position: relative;
   text-transform: uppercase;
   color: #5c6670;
   line-height: 1.1875;
   padding: 0.5625rem 1.4375rem;
-  border: 0.0625rem dashed #898989;
   border-radius: 0.3125rem;
   font-size: 1rem;
+}
+
+.label::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: repeating-linear-gradient(90deg, var(--color) 0 var(--dash), transparent var(--dash) calc(var(--dash) + var(--gap))) top/auto var(--line) repeat-x, repeating-linear-gradient(90deg, var(--color) 0 var(--dash), transparent var(--dash) calc(var(--dash) + var(--gap))) bottom/auto var(--line) repeat-x, repeating-linear-gradient(180deg, var(--color) 0 var(--dash), transparent var(--dash) calc(var(--dash) + var(--gap))) left/var(--line) auto repeat-y, repeating-linear-gradient(180deg, var(--color) 0 var(--dash), transparent var(--dash) calc(var(--dash) + var(--gap))) right/var(--line) auto repeat-y;
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: var(--line);
 }
 
 .label:not(:last-child) {
@@ -1558,6 +1576,10 @@ body::after {
   margin-bottom: 3.125rem;
 }
 
+.advantages__slider {
+  overflow: visible;
+}
+
 .advantages__cols {
   display: -ms-grid;
   display: grid;
@@ -1582,6 +1604,11 @@ body::after {
   border-radius: 1rem;
   gap: 1rem;
   padding: 2rem;
+  will-change: transform;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 .advantage__icon {
@@ -4167,8 +4194,8 @@ body::after {
   padding: 0.5625rem;
   border: 0.0625rem solid #e6eaf0;
   border-radius: 0.3125rem;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .header-bottom__item:hover .sub-menu {
@@ -4751,6 +4778,7 @@ a.footer__nav-link_underline {
 
 .hero-form__btn {
   min-width: 19.125rem;
+  font-weight: 700;
 }
 
 .hero-docs {
@@ -7654,8 +7682,10 @@ a.service-order__price-link {
   }
 
   .label {
+    --dash: 0.3125vw;
+    --gap: 0.3125vw;
+    --line: 0.0520833333vw;
     padding: 0.46875vw 1.1979166667vw;
-    border: 0.0520833333vw dashed #898989;
     border-radius: 0.2604166667vw;
     font-size: 0.8333333333vw;
   }
@@ -11683,10 +11713,6 @@ a.service-order__price-link {
     margin-bottom: 2.5rem;
   }
 
-  .advantages__slider {
-    overflow: visible;
-  }
-
   .advantages__cols {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -14883,6 +14909,12 @@ a.service-order__price-link {
             transform: translateY(-0.125rem);
   }
 
+  .advantage:hover {
+    -webkit-transform: translateY(-0.25rem);
+        -ms-transform: translateY(-0.25rem);
+            transform: translateY(-0.25rem);
+  }
+
   .help-choosing__tag-text:hover {
     border-color: #e51616;
   }
@@ -14951,9 +14983,8 @@ a.service-order__price-link {
     opacity: 0.8;
   }
 
-  .header-bottom__item > a:hover {
-    color: #e51616;
-    border-color: #e51616;
+  .header-bottom__item:hover > a {
+    background: #eef1f4;
   }
 
   .sub-menu__item a:hover {
