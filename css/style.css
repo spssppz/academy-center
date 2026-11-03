@@ -321,7 +321,10 @@ textarea.input {
 .checkbox__text::after {
   content: "";
   position: absolute;
-  top: 0;
+  top: 55%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   left: 0;
   width: 1.1875rem;
   height: 1.1875rem;
@@ -3346,6 +3349,8 @@ body::after {
 .learning__image {
   border-radius: 0.4375rem;
   overflow: hidden;
+  -webkit-transition: border-radius 0.4s;
+  transition: border-radius 0.4s;
 }
 
 .learning__image img {
@@ -3360,10 +3365,14 @@ body::after {
   will-change: transform;
 }
 
+.learning__image:hover {
+  border-radius: 0.875rem;
+}
+
 .learning__image:hover img {
-  -webkit-transform: scale(1.05) rotate(1deg);
-      -ms-transform: scale(1.05) rotate(1deg);
-          transform: scale(1.05) rotate(1deg);
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .learning__image_full {
@@ -3374,9 +3383,9 @@ body::after {
 }
 
 .learning__image_full:hover img {
-  -webkit-transform: scale(1.06) rotate(-2deg);
-      -ms-transform: scale(1.06) rotate(-2deg);
-          transform: scale(1.06) rotate(-2deg);
+  -webkit-transform: scale(1.06);
+      -ms-transform: scale(1.06);
+          transform: scale(1.06);
 }
 
 .learning__image_big {
@@ -4774,6 +4783,7 @@ a.footer__nav-link_underline {
 
 .hero-form__input {
   padding: 0rem 4.5rem;
+  font-size: 1.125rem;
 }
 
 .hero-form__btn {
@@ -4880,6 +4890,11 @@ a.footer__nav-link_underline {
 .hero-images__slide img {
   width: 100%;
   height: auto;
+  will-change: transform;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .hero-images__slide:not(:last-child) {
@@ -5113,6 +5128,10 @@ a.footer__nav-link_underline {
   margin-bottom: 2rem;
 }
 
+.coop__slider {
+  overflow: visible;
+}
+
 .coop__partners {
   display: -ms-grid;
   display: grid;
@@ -5125,6 +5144,11 @@ a.footer__nav-link_underline {
   border: 0.0625rem solid #dbdbdb;
   border-radius: 0.4375rem;
   overflow: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  will-change: transform;
 }
 
 .coop__partner img {
@@ -5581,7 +5605,6 @@ a.footer__nav-link_underline {
 }
 
 .course-card__params {
-  margin-top: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9567,6 +9590,7 @@ a.service-order__price-link {
   }
 
   .hero-form__input {
+    font-size: 0.9375vw;
     padding: 0rem 3.75vw;
   }
 
@@ -12555,6 +12579,10 @@ a.service-order__price-link {
     margin-bottom: 1.5625rem;
   }
 
+  .hero-form__input {
+    font-size: 1rem;
+  }
+
   .hero-docs__slide {
     padding: 1.25rem;
   }
@@ -12609,10 +12637,6 @@ a.service-order__price-link {
 
   .coop__head:not(:last-child) {
     margin-bottom: 1.5rem;
-  }
-
-  .coop__slider {
-    overflow: visible;
   }
 
   .coop__partners {
@@ -15026,6 +15050,18 @@ a.service-order__price-link {
 
   a.footer__nav-link_underline:hover {
     margin-left: 0;
+  }
+
+  .hero-images__slide:hover img {
+    -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+
+  .coop__partner:hover {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
   }
 
   .coop-cases__btn:hover svg path {
