@@ -1364,10 +1364,13 @@ body::after {
   position: absolute;
   top: 0;
   left: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
   width: 100%;
   height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
+  transition: opacity 0.3s;
 }
 
 .profession img {
@@ -1425,24 +1428,8 @@ body::after {
 .profession__btn {
   padding: 0.5625rem 1.0625rem;
   font-size: 0.625rem;
-  position: static;
-  overflow: visible;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
-}
-
-.profession__btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: none;
-  -webkit-transform: translate(0);
-      -ms-transform: translate(0);
-          transform: translate(0);
-  pointer-events: auto;
 }
 
 .profession__count {
@@ -5070,6 +5057,11 @@ a.footer__nav-link_underline {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  will-change: transform;
 }
 
 .team-item:not(:last-child) {
@@ -5467,15 +5459,6 @@ a.footer__nav-link_underline {
 .catalog-col__btn {
   font-size: 0.625rem;
   padding: 0.5rem 1.0625rem;
-}
-
-.catalog-col__btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .catalog-col__count {
@@ -7477,6 +7460,11 @@ a.service-order__price-link {
 
   .hero-form:not(:last-child) {
     margin-bottom: 1.125rem;
+  }
+
+  .team__slider {
+    margin: -1.5rem;
+    padding: 1.5rem;
   }
 
   .services__body {
@@ -14913,12 +14901,8 @@ a.service-order__price-link {
     color: #fff;
   }
 
-  .profession__btn:hover {
-    opacity: 0.8;
-  }
-
-  .profession__btn:hover::after {
-    left: 0;
+  .profession:hover::after {
+    opacity: 0.9;
   }
 
   .why-we-col:hover .why-we-col__icon {
@@ -15056,6 +15040,12 @@ a.service-order__price-link {
     -webkit-transform: scale(1.02);
         -ms-transform: scale(1.02);
             transform: scale(1.02);
+  }
+
+  .team-item:hover {
+    -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+            transform: scale(1.03);
   }
 
   .coop__partner:hover {
